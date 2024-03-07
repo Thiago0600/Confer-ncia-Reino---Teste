@@ -4,7 +4,6 @@ import {
     UpdateDateColumn,
     Column,
 } from 'typeorm';
-import { Client } from 'pg';
 
 export default class AuditBaseEntity {
     @PrimaryGeneratedColumn('uuid')
