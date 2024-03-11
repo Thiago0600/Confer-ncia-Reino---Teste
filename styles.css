@@ -1,116 +1,237 @@
+/* Reset de margens e paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    color: #ffd700;
-    text-align: center;
-  }
-  
-  header {
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  h1, h2, h3 {
-    color: #ffd700;
-  }
-  
-  section {
-    padding: 20px;
-  }
-  
-  .content img {
-    width: 500px; /* Tamanho da imagem ajustável */
-    height: auto;
-    float: left;
-    margin-right: 20px;
-    display: flex;
-    text-align: center;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #4d5358; /* Azul escuro */
+  color: white;
+}
 
+header {
+  background-color: #0f0f0f; /* Azul */
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: gold;
+  font-size: 2.5em;
+}
+
+#apresentacao {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+#apresentacao .content {
+  position: relative;
+}
+
+#apresentacao img {
+  width: 100%;
+  display: block;
+}
  
-  #preletor1 img {
-    width: 150px; /* Tamanho da imagem ajustável */
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  #preletor2 img {
-    width: 150px; /* Tamanho da imagem ajustável */
-    height: auto;
-    margin-bottom: 10px;
-    display: inline-block;
-  }
+ #texto {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100vh; /* Altura total da viewport */
+  font-family: 'Arial', sans-serif; /* Fonte */
+  font-size: 18px; /* Tamanho da fonte */
+  color: #333; /* Cor do texto */
+  text-align: center; /* Alinhamento do texto */
+  background-color: #f0f0f0; /* Cor de fundo */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 10px; /* Borda arredondada */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  max-width: 80%; /* Largura máxima */
+}
 
-  #preletor3 img {
-    width: 150px; /* Tamanho da imagem ajustável */
-    height: auto;
-    margin-bottom: 10px;
-    display: inline-block;
-  }
+#texto p {
+  margin: 0; /* Remove margem padrão */
+  padding: 10px; /* Espaçamento interno */
+  line-height: 1.6; /* Altura da linha */
+  
+}
 
+.preletores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
 
-  #programacao {
-    text-align: center;
-  }
-  
-  
-  .box {
-    background-color: #ffd700;
-    color: #000;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-  }
-  
-  #formulario {
-    text-align: center;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 80%;
-    margin: 0 auto 10px;
-    display: block;
-  }
-  
-  button {
-    background-color: #ffd700;
-    color: #000;
-    cursor: pointer;
-  }
+.preletores div {
+  width: calc(20% - 20px);
+  margin-bottom: 20px;
+}
 
-  #dia1{
-    width: 200px;
-    height: 500px;
-    display: inline-block;
-  }
+.preletores img {
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
 
-  #dia2{
-    width: 200px;
-    height: 500px;
-    display: inline-block;
-  }
-
-  #dia3{
-    width: 200px;
-    height: 500px;
-    display: inline-block;
-  }
+.preletores p {
+  color: gold;
+  text-align: center;
+}
 
 
- 
+#dia1, #dia2, #dia3 {
+  width: 350px;
+  height: 350px;
+  background-color: #34495E; /* Cor de fundo azul escuro */
+  color: #FFFFFF; /* Cor do texto branco */
+  border-radius: 10px; /* Borda arredondada */
+  padding: 50px; /* Espaçamento interno */
+  display: inline-block;
+  margin: 47px; /* Centralizar horizontalmente */
+}
+
+h3{
+  text-align: center;
+  padding:1px;
+}
+
+h2{
+  text-align: center;
+}
+.faq-container {
+  padding: 20px;
+}
+
+.faq-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: gold;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.question {
+  color: gold;
+}
+
+.answer {
+  padding-left: 20px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.social-list li {
+  margin: 0 10px;
+}
+
+.social-list a {
+  color: gold;
+  font-size: 24px;
+}
+
+.social-list a:hover {
+  color: white;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+
+#formulario {
+  text-align: center; /* Alinhar conteúdo ao centro */
+}
+
+.form-group {
+  margin-bottom: 20px; /* Espaçamento entre grupos de campos */
+}
+
+label {
+  display: block; /* Colocar cada rótulo em uma nova linha */
+  margin-bottom: 5px; /* Espaçamento abaixo de cada rótulo */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 50%; /* Preencher toda a largura do contêiner */
+  padding: 10px; /* Espaçamento interno */
+  margin-bottom: 10px; /* Espaçamento abaixo do campo */
+  border: 1px solid #ccc; /* Borda cinza */
+  border-radius: 5px; /* Borda arredondada */
+  box-sizing: border-box; /* Incluir padding e border na largura total */
+  text-align: center;
+}
+
+button[type="submit"] {
+  background-color: #007BFF; /* Cor de fundo azul */
+  color: #fff; /* Cor do texto branco */
+  padding: 10px 20px; /* Espaçamento interno */
+  border: none; /* Remover borda */
+  border-radius: 5px; /* Borda arredondada */
+  cursor: pointer; /* Alterar cursor ao passar por cima */
+}
+
+button[type="submit"]:hover {
+  background-color: #e7eb17; /* Alterar cor de fundo ao passar por cima */
+}
+
+
+
+
+.faq-container{
+  max-width: 800px;
+  margin: 0 auto;
+  padding:20px;
+}
+
+.faq-container h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #333;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.question {
+  font-size: 24px;
+  color: gold;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.answer {
+  font-size: 18px;
+  color: #0e0d0d;
+  display: none;
+}
+
+.answer p {
+  margin-bottom: 10px;
+}
+
+.faq-item:nth-child(odd) .answer {
+  display: block;
+}
