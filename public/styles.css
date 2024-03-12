@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+@media only screen and (max-width: 600px) {
+  /* Estilos para dispositivos móveis aqui */
+}
+
+.container {
+  width: 90%; /* 90% da largura do elemento pai */
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #4d5358; /* Azul escuro */
@@ -12,14 +20,23 @@ body {
 }
 
 header {
-  background-color: #0f0f0f; /* Azul */
-  padding: 20px;
+  background-color: black;
+  color: gold;
   text-align: center;
+  padding: 20px 0;
 }
 
 h1 {
-  color: gold;
-  font-size: 2.5em;
+  font-size: 36px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Efeito de brilho no hover */
+header:hover {
+  background-color: gold;
+  color: black;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 #apresentacao {
@@ -103,6 +120,7 @@ h3{
 h2{
   text-align: center;
 }
+
 .faq-container {
   padding: 20px;
 }
@@ -235,3 +253,13 @@ button[type="submit"]:hover {
 .faq-item:nth-child(odd) .answer {
   display: block;
 }
+
+.section-com-imagem {
+  background-image: url('./images/53249553573_91861bf1b1_o.jpg');
+  background-size: cover; /* Para cobrir toda a área da seção */
+  background-position: center; /* Para centralizar a imagem */
+  background-repeat: no-repeat; /* Para evitar a repetição da imagem */
+  background-color: rgba(255, 255, 255, 0);
+  transition: 1,5s;
+}
+
