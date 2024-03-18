@@ -14,9 +14,9 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #4d5358; /* Azul escuro */
-  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #c7c7bfc5; /* Azul escuro */
+  
 }
 
 header {
@@ -41,32 +41,36 @@ header:hover {
 
 
 .Titulo-destaque{
-  color: Turquoise;
+  color: gold;
+  animation: text 10s ease alternate infinite;
 }
 
+
 .apresentacao{
-  margin: 10% 15%;
+  margin: 8% 12%;
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: space-between;
 
 }
 
+
+
 .apresentacao__conteudo{
-  width: 615px;
+  width: 500px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 }
 
 .apresentacao__conteudo__titulo{
   font-size:36px;
-  font-family: 'Krona One', sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .apresentacao__conteudo__texto{
-  font-size:24px;
-  font-family: 'Montserrat', sans-serif;
+  font-size:16px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .apresentacao__links{
@@ -75,19 +79,22 @@ header:hover {
 }
 
 
-img { 
-  max-width: 60%;
+
+.capa img { 
+  max-width: 100%;
   max-height: 80%;
   border-radius: 10px; 
   text-align: right;
-  filter: drop-shadow(10px 0  30px #fff);
+  filter: drop-shadow(10px 0  30px #fff562);
+  margin: 1% 12%;
 }
 
 .preletores {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 20px;
+  padding: 25px;
+  text-align: center;
 }
 
 .preletores div {
@@ -102,7 +109,7 @@ img {
 }
 
 .preletores p {
-  color: gold;
+  color: rgb(26, 23, 12);
   text-align: center;
 }
 
@@ -110,8 +117,8 @@ img {
 #dia1, #dia2, #dia3 {
   width: 350px;
   height: 350px;
-  background-color: #34495E; /* Cor de fundo azul escuro */
-  color: #FFFFFF; /* Cor do texto branco */
+  background-color: gold; /* Cor de fundo azul escuro */
+  color: black; /* Cor do texto branco */
   border-radius: 10px; /* Borda arredondada */
   padding: 50px; /* Espaçamento interno */
   display: inline-block;
@@ -124,50 +131,89 @@ h3{
 }
 
 h2{
-  text-align: center;
-}
-
-.faq-container {
-  padding: 20px;
-}
-
-.faq-container h1 {
-  text-align: center;
   margin-bottom: 20px;
-  color: gold;
+  text-align: center;
+  margin: 2%;
 }
 
-.faq-item {
+.container {
+  text-align: center;
+  padding: 30px;
+  margin: 6%;
+}
+
+h1 {
   margin-bottom: 20px;
+  text-align: center;
+  margin: 2%;
 }
 
-.question {
-  color: gold;
+.accordion{
+  width: 60%;
+  margin: 0 auto 10px;
+  background-color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.answer {
-  padding-left: 20px;
-}
-
-.social-list {
+.accordion-header{
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  outline: none;
+  width: 100%;
+  border: none;
+  background-color: transparent;
   display: flex;
-  justify-content: center;
-  padding: 20px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  justify-content: space-between;
+  font-size: 16px;
+  cursor: pointer;
+  margin:50;
 }
 
-.social-list li {
-  margin: 0 10px;
+.accordion-header span{
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
 }
 
-.social-list a {
-  color: gold;
-  font-size: 24px;
+.accordion-body{
+  color: black;
+  font-size: 14px;
+  padding: 10px 20px;
+  opacity: 0;
+  height: 0;
+  text-align: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.social-list a:hover {
-  color: white;
+.accordion-body.active{
+      height: 100%;
+      opacity: 1;
 }
 
+
+
+
+
+.arrow {
+  float: right;
+  transform: rotate(90deg);
+}
+
+.open {
+  transform: rotate(-90deg);
+}
+
+.show {
+  display: block;
+}
 /* Animações */
 @keyframes fadeIn {
   from {
@@ -205,15 +251,18 @@ input[type="tel"] {
   border-radius: 5px; /* Borda arredondada */
   box-sizing: border-box; /* Incluir padding e border na largura total */
   text-align: center;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 14px;
 }
 
 button[type="submit"] {
-  background-color: #007BFF; /* Cor de fundo azul */
+  background-color: black; /* Cor de fundo azul */
   color: #fff; /* Cor do texto branco */
-  padding: 10px 20px; /* Espaçamento interno */
+  padding: 20px 20px; /* Espaçamento interno */
   border: none; /* Remover borda */
-  border-radius: 5px; /* Borda arredondada */
+  border-radius: 10px; /* Borda arredondada */
   cursor: pointer; /* Alterar cursor ao passar por cima */
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 button[type="submit"]:hover {
@@ -269,28 +318,27 @@ button[type="submit"]:hover {
   transition: 1,5s;
 }
 
-.apresentacao__links__link {
+.social-links {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.social-link {
   display: inline-block;
-  margin-right: 10px; /* Espaço entre os ícones */
-  width: 30px; /* Largura dos ícones */
-  height: 30px; /* Altura dos ícones */
-  background-repeat: no-repeat; /* Evita a repetição da imagem de fundo */
+  margin: 0 20px;
 }
 
-.apresentacao__links__link.instagram {
-  background-image: url('caminho/para/o/seu/instagram_logo.png'); /* Substitua pelo caminho da imagem do Instagram */
+.social-link img {
+  width: 40px;
+  height: 40px;
 }
 
-.apresentacao__links__link.facebook {
-  background-image: url('caminho/para/o/seu/facebook_logo.png'); /* Substitua pelo caminho da imagem do Facebook */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position:static;
+  width: 100%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
-/* Estilos opcionais para melhorar a acessibilidade e interação */
-.apresentacao__links__link {
-  text-indent: -9999px; /* Oculta o texto do link */
-}
-
-.apresentacao__links__link:hover {
-  opacity: 0.7; /* Opacidade reduzida ao passar o mouse para indicar interatividade */
-}
-
